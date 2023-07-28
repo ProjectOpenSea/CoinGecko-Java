@@ -22,7 +22,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@master
         with:
-          role-to-assume: arn:aws:iam::718537141989:role/github-actions
+          role-to-assume: ${{ vars.GH_AWS_ROLE }}
           aws-region: us-east-1
 
       # Publish to AWS codeartifact
